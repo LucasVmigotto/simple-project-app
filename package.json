@@ -1,0 +1,45 @@
+{
+  "name": "simple-project-app",
+  "version": "0.1.0",
+  "description": "A simple project (front-end only)",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasVmigotto/simple-project-app.git"
+  },
+  "keywords": [
+    "Vue",
+    "Vuetify"
+  ],
+  "author": "Lucas Vidor Migotto <lucasmigotto@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucasVmigotto/simple-project-app/issues"
+  },
+  "homepage": "https://github.com/LucasVmigotto/simple-project-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "material-design-icons": "^3.0.1",
+    "material-design-icons-iconfont": "^3.0.3",
+    "vue": "^2.5.16",
+    "vuetify": "^1.1.9",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli": "^3.0.0-rc.10",
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "@vue/eslint-config-standard": "^3.0.0-rc.10",
+    "eslint": "^5.2.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.5.16"
+  }
+}

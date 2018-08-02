@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: ./docker
+      args:
+      - http_proxy
+      - https_proxy
+      - no_proxy
+    command: npm start
+    tty: false
+    working_dir: /app
+    environment:
+    - http_proxy
+    - https_proxy
+    - no_proxy
+    - PORT
+    - LOCAL_USER_ID
+    ports:
+    - 4001:4001
+    volumes:
+    - .:/app
+    networks:
+    - simple-project-api
+
+networks:
+  simple-project-api:
+    external: true
