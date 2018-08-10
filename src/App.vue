@@ -8,7 +8,7 @@
         <v-card
           color="primary"
           class="message">
-          <span class="headline">{{ message }}</span>
+          <span class="headline">{{ apiVersion }}</span>
         </v-card>
       </v-flex>
     </v-layout>
@@ -16,15 +16,29 @@
 </template>
 
 <script>
+import { mapActions, mapState, mapGetters } from 'vuex'
 export default {
   name: 'app',
   data: () => ({
     message: 'Hello, world!'
   }),
-  created () {},
-  computed: {},
+  async created () {
+    this.getApiVersion()
+  },
+  computed: {
+    ...mapState([
+      'error',
+      'showError',
+      'loading',
+      'apiVersion'
+    ])
+  },
   mounted: {},
-  methods: {},
+  methods: {
+    ...mapActions([
+      'getApiVersion'
+    ])
+  },
   watch: {},
   components: {}
 }
